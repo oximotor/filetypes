@@ -1,0 +1,5 @@
+//would be named with hex digits, CHUNK-LAYER.oxtm
+//Is just an array of u8 ints reping the tiles. read till eof or max chunk size, assume any missing are empty.
+[
+	0,0,0,1,5,0,1,0,1,0,1,0,1,0,1,0,0,1,1,0,1
+]

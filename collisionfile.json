@@ -1,0 +1,10 @@
+//example, later will be in raw binary
+[ //Consists of a f32 array of coordinates in layout: x,y,x,y,x,y defining the points of a collision polygon, and the order they are connected, last point will always connect with the first point.
+	//these coords are offset from the mathmatical center of the tile which would be considered 0,0
+	23.5,24.7,
+	28.8,39.9
+] //legit just read in pairs until eof
+
+//see https://paulbourke.net/geometry/pointlineplane/javascript.txt for a line collision method
+
+//this will cause issues where a bounding box could be contained within another polygon. this means its a good method for collision with environment that prevents vectored movement.
