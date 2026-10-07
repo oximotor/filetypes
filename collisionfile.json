@@ -1,6 +1,6 @@
 //example, later will be in raw binary
 [ //Consists of a f32 array of coordinates in layout: x,y,x,y,x,y defining the points of a collision polygon, and the order they are connected, last point will always connect with the first point.
-	//these coords are offset from the mathmatical center of the tile which would be considered 0,0
+	//these coords are offset from the bottom left corner of the tile.
 	23.5,24.7,
 	28.8,39.9
 ] //legit just read in pairs until eof
