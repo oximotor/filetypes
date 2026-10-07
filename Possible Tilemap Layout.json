@@ -1,8 +1,8 @@
 {
 	//Would have the tilemap definitons first:
-	"tilemap-size-x":10, //u16
-	"tilemap-size-y":10, //u16
-	"tile-size-px":16, //u16
+	"tilemap-size-x":10, //u16 in tiles
+	"tilemap-size-y":10, //u16 in tiles
+	"tile-size-px":16, //u16 tile will always be square
 	"chunk-count-x":2, //u8 split map into seperate files, for ram optimization. this is a divisor of tilemap-size. tilemap-size-x MUST be evenly divisable by this for this to be valid data.
 	"chunk-count-y":2, //u8 split map into seperate files, for ram optimization. this is a divisor of tilemap-size. tilemap-size-y MUST be evenly divisable by this for this to be valid data.
 	//chunks will be generated around the player, default pregeneration is a 1 chunk off screen border in all directions will be loaded at any given time
@@ -33,4 +33,8 @@
 			"height":-1, //i8 render priority over other layers. if matching other layers in this array it will be based on index.
 		}
 	]
+
+	//at compile time, all collision polygons in a layer will go under an optimization algorithm, which will attempt to merge all the polys to make as little collision steps as possible-
+	//as well as optimize cpu resource consumption
+	//this algo will likely have a standard and a cuda variant, defaulting to standard, though potentially just checking to see if cuda is available to auto decide.
 }
