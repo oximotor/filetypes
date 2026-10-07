@@ -22,6 +22,10 @@
 			"texture-rotation":0, //u8 90 degree increments
 			"texture-offset-x":5, //u16 in px
 			"texture-offset-y":5, //u16 in px
+			"texture-crop-top":0, //u16 in px from top side of texture
+			"texture-crop-right":0, //u16 in px from right side of texture
+			"texture-crop-bottom":0, //u16 in px from bottom side of texture
+			"texture-crop-left":0, //u16 in px from left side of texture
 		}
 	],
 
